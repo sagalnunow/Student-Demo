@@ -1,0 +1,61 @@
+﻿@model List<DugsiManagement.Models.Student>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>List of students</h2>
+
+<div class="container">
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading  text-center">Ardayda Dugsiga Attaqwa</div>
+        <div class="panel-body">
+
+
+
+            <table class="table table-bordered table-condensed table-hover table-responsivec table-striped">
+                <tr>
+                    <td>Id</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Gender</td>
+                    <td>Age</td>
+                </tr>
+                @foreach (var arday in Model)
+                {
+                    <tr>
+
+                        <td>@arday.Id</td>
+                        <td>@arday.FirstName</td>
+                        <td>@arday.LastName</td>
+                        <td>@arday.Gender</td>
+                        <td>@arday.Age</td>
+                    </tr>
+                }
+
+
+
+
+            </table>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+

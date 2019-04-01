@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GodeyLibraryDbModelStoreContainer" CdmEntityContainer="GodeyLibraryDbEntities">
+    <EntitySetMapping Name="LibraryAssets">
+      <EntityTypeMapping TypeName="GodeyLibraryDbModel.LibraryAsset">
+        <MappingFragment StoreEntitySet="LibraryAssets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="NumberOfCopies" ColumnName="NumberOfCopies" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="DeweyIndex" ColumnName="DeweyIndex" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LibraryBranches">
+      <EntityTypeMapping TypeName="GodeyLibraryDbModel.LibraryBranch">
+        <MappingFragment StoreEntitySet="LibraryBranches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

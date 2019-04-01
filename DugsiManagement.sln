@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DugsiManagement", "DugsiManagement\DugsiManagement.csproj", "{728C8F50-F04F-45E1-82E8-194AE51F3806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{8AE8685C-7577-4813-BCF4-4294E0115DB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{728C8F50-F04F-45E1-82E8-194AE51F3806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728C8F50-F04F-45E1-82E8-194AE51F3806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728C8F50-F04F-45E1-82E8-194AE51F3806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728C8F50-F04F-45E1-82E8-194AE51F3806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE8685C-7577-4813-BCF4-4294E0115DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE8685C-7577-4813-BCF4-4294E0115DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE8685C-7577-4813-BCF4-4294E0115DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE8685C-7577-4813-BCF4-4294E0115DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6834FF8-718F-49A1-8C56-40BD7774FA84}
+	EndGlobalSection
+EndGlobal

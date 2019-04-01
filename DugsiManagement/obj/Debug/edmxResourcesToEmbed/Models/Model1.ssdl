@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GodeyLibraryDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LibraryAssets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="NumberOfCopies" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="DeweyIndex" Type="nvarchar(max)" />
+    <Property Name="ISBN" Type="nvarchar(max)" />
+    <Property Name="Discriminator" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Director" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LibraryBranches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="OpenDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Telephone" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_LibraryAssets_LibraryBranches_LocationId">
+    <End Role="LibraryBranches" Type="Self.LibraryBranches" Multiplicity="0..1" />
+    <End Role="LibraryAssets" Type="Self.LibraryAssets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LibraryAssets">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GodeyLibraryDbModelStoreContainer">
+    <EntitySet Name="LibraryAssets" EntityType="Self.LibraryAssets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LibraryBranches" EntityType="Self.LibraryBranches" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_LibraryAssets_LibraryBranches_LocationId" Association="Self.FK_LibraryAssets_LibraryBranches_LocationId">
+      <End Role="LibraryBranches" EntitySet="LibraryBranches" />
+      <End Role="LibraryAssets" EntitySet="LibraryAssets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
